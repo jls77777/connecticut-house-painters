@@ -92,7 +92,7 @@ export function ServiceAreas() {
             <h2>Don&apos;t see your town?</h2>
             <p>We cover many neighborhoods inside these counties. Ask — we often can help.</p>
           </div>
-          <a className="btn btn-buoy" href={company.phone.tel}>
+          <a className="btn btn-red" href={company.phone.tel}>
             <PhoneIcon /> {company.phone.display}
           </a>
         </div>

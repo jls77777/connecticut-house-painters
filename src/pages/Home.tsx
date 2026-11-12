@@ -37,10 +37,10 @@ export function Home() {
             New London · Middlesex · Windham Counties, and Washington County, RI.
           </p>
           <div className="hero-actions">
-            <a className="btn btn-buoy" href={company.phone.tel}>
+            <a className="btn btn-red" href={company.phone.tel}>
               <PhoneIcon /> Call {company.phone.display}
             </a>
-            <a className="btn btn-sea" href={company.phone.sms}>
+            <a className="btn btn-blue" href={company.phone.sms}>
               <SmsIcon /> Text Willie&apos;s crew
             </a>
             <Link className="btn btn-ghost" to="/contact#estimate">
@@ -91,7 +91,7 @@ export function Home() {
             ))}
           </div>
           <div className="section-cta">
-            <Link className="btn btn-sea" to="/services">
+            <Link className="btn btn-blue" to="/services">
               All services
             </Link>
           </div>
@@ -112,7 +112,7 @@ export function Home() {
                 satisfaction guarantee.
               </p>
               <div className="cta-actions">
-                <a className="btn btn-buoy" href={company.phone.tel}>
+                <a className="btn btn-red" href={company.phone.tel}>
                   <PhoneIcon /> {company.phone.display}
                 </a>
                 <Link className="btn btn-ghost" to="/about">
@@ -161,7 +161,7 @@ export function Home() {
             <ServiceAreaMap />
           </Reveal>
           <div className="section-cta">
-            <Link className="btn btn-buoy" to="/service-areas">
+            <Link className="btn btn-red" to="/service-areas">
               Browse all towns
             </Link>
           </div>
@@ -204,10 +204,10 @@ export function Home() {
             </div>
           </Reveal>
           <div className="cta-actions">
-            <a className="btn btn-buoy" href={company.phone.tel}>
+            <a className="btn btn-red" href={company.phone.tel}>
               <PhoneIcon /> Call now
             </a>
-            <a className="btn btn-sea" href={company.phone.sms}>
+            <a className="btn btn-blue" href={company.phone.sms}>
               <SmsIcon /> Text us
             </a>
             <Link className="btn btn-ghost" to="/contact#estimate">

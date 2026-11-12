@@ -45,7 +45,7 @@ export function Layout() {
             ))}
           </nav>
 
-          <a className="btn btn-buoy header-cta" href={company.phone.tel}>
+          <a className="btn btn-red header-cta" href={company.phone.tel}>
             <PhoneIcon /> {company.phone.display}
           </a>
 
@@ -73,10 +73,10 @@ export function Layout() {
                 {item.label}
               </NavLink>
             ))}
-            <a className="btn btn-buoy" href={company.phone.tel}>
+            <a className="btn btn-red" href={company.phone.tel}>
               <PhoneIcon /> Call {company.phone.display}
             </a>
-            <a className="btn btn-sea" href={company.phone.sms}>
+            <a className="btn btn-blue" href={company.phone.sms}>
               <SmsIcon /> Text us
             </a>
           </nav>

@@ -47,7 +47,8 @@ Visitors arrive from local search or referral on phone or desktop, often mid-dec
 - Email: connecticuthousepainters@gmail.com
 - Address: 919 Colonel Ledyard Hwy, Ledyard, CT 06339
 - Mascot: Willie the Whale; tagline “When dirt gets silly call Willie”
-- Visual world: working-waterfront washdown at dawn (wet deck, hose mist, harbor navy, seafoam foam, buoy blaze accent) — fun and powerful, not generic painter cards or AI purple/cream-terracotta
+- Binding brand palette (CHP color-code.pdf): sky `#33cfff`, signal blue `#0456d0`, deep navy `#0f356d`, action red `#de0703`, light gray `#bec4c6`, slate gray `#87939b`
+- Visual world: working-waterfront washdown at dawn in that navy/blue/cyan system with red CTAs — fun and powerful, not generic painter cards or AI purple/cream-terracotta
 - Voice: confident, friendly, local, results-first — Willie brings humor; the work stays serious
 - User frontend rules: brand-first hero, one composition, expressive non-default fonts, full-bleed real imagery, no card clutter in hero, purposeful motion
 

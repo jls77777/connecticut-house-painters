@@ -69,7 +69,7 @@ export function Gallery() {
             <p>Call or text {company.phone.display} for a free estimate.</p>
           </div>
           <div className="cta-actions">
-            <a className="btn btn-buoy" href={company.phone.tel}>
+            <a className="btn btn-red" href={company.phone.tel}>
               <PhoneIcon /> Call now
             </a>
             <Link className="btn btn-ghost" to="/contact#estimate">

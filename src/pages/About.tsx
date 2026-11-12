@@ -60,7 +60,7 @@ export function About() {
               Willie is our mascot and reminder that curb appeal can be fun without cutting corners
               on craft. Tagline locked: <em>{company.tagline}</em>.
             </p>
-            <a className="btn btn-buoy" href={company.phone.tel}>
+            <a className="btn btn-red" href={company.phone.tel}>
               <PhoneIcon /> {company.phone.display}
             </a>
           </div>
@@ -86,7 +86,7 @@ export function About() {
             ))}
           </div>
           <div className="section-cta">
-            <Link className="btn btn-sea" to="/contact">
+            <Link className="btn btn-blue" to="/contact">
               Contact the crew
             </Link>
           </div>

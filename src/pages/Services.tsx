@@ -30,7 +30,7 @@ export function Services() {
                       <li key={b}>{b}</li>
                     ))}
                   </ul>
-                  <Link className="btn btn-sea" to={`/services/${s.path}`}>
+                  <Link className="btn btn-blue" to={`/services/${s.path}`}>
                     {s.shortName} details <ArrowIcon />
                   </Link>
                 </div>
@@ -46,7 +46,7 @@ export function Services() {
             <h2>Not sure which service you need?</h2>
             <p>Send photos or describe the surface — we will recommend soft wash vs power wash.</p>
           </div>
-          <a className="btn btn-buoy" href={company.phone.tel}>
+          <a className="btn btn-red" href={company.phone.tel}>
             <PhoneIcon /> {company.phone.display}
           </a>
         </div>

@@ -68,18 +68,18 @@ export function ServiceAreaMap() {
         <svg viewBox="0 0 840 560" className="county-map" aria-hidden="true">
           <defs>
             <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stopColor="#0a3a55" />
-              <stop offset="100%" stopColor="#021828" />
+              <stop offset="0%" stopColor="#0456d0" />
+              <stop offset="100%" stopColor="#0f356d" />
             </linearGradient>
             <linearGradient id="foam" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stopColor="#1ec8a5" />
-              <stop offset="100%" stopColor="#0ea5e9" />
+              <stop offset="0%" stopColor="#33cfff" />
+              <stop offset="100%" stopColor="#0456d0" />
             </linearGradient>
           </defs>
           <rect width="840" height="560" fill="url(#sea)" rx="18" />
           <path
             d="M 40 420 C 180 380, 320 460, 480 430 S 720 400, 800 450 L 800 560 L 40 560 Z"
-            fill="#06324a"
+            fill="#0f356d"
             opacity="0.9"
           />
           <text x="48" y="64" className="map-title">
@@ -113,7 +113,7 @@ export function ServiceAreaMap() {
             )
           })}
 
-          <circle cx="505" cy="330" r="7" fill="#ff5a1f" />
+          <circle cx="505" cy="330" r="7" fill="#de0703" />
           <text x="518" y="335" className="hq-label">
             Ledyard HQ
           </text>

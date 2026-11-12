@@ -67,7 +67,7 @@ export function PaintingServices() {
             <h3>Ready to paint?</h3>
             <p>Visit the painting site for colors, services, and estimates.</p>
             <a
-              className="btn btn-buoy"
+              className="btn btn-red"
               href={company.paintingUrl}
               target="_blank"
               rel="noopener noreferrer"

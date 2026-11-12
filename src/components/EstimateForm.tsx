@@ -65,10 +65,10 @@ export function EstimateForm({ compact = false }: { compact?: boolean }) {
             Call or text Willie&apos;s crew and we will get you on the calendar.
           </p>
           <div className="cta-actions" style={{ justifyContent: 'center' }}>
-            <a className="btn btn-buoy" href={company.phone.tel}>
+            <a className="btn btn-red" href={company.phone.tel}>
               <PhoneIcon /> Call {company.phone.display}
             </a>
-            <a className="btn btn-sea" href={company.phone.sms}>
+            <a className="btn btn-blue" href={company.phone.sms}>
               <SmsIcon /> Text us
             </a>
             <button type="button" className="btn btn-outline" onClick={() => setStatus('idle')}>
@@ -149,7 +149,7 @@ export function EstimateForm({ compact = false }: { compact?: boolean }) {
           </div>
         </div>
         <div className="form-actions">
-          <button className="btn btn-buoy" type="submit" disabled={status === 'submitting'}>
+          <button className="btn btn-red" type="submit" disabled={status === 'submitting'}>
             {status === 'submitting' ? 'Sending…' : 'Request free estimate'}
           </button>
           <a className="btn btn-outline" href={company.phone.sms}>
