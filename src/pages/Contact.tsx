@@ -1,77 +1,63 @@
-import { useEffect } from 'react'
-import { useLocation } from 'react-router-dom'
-import { EstimateForm } from '../components/EstimateForm'
 import { Reveal } from '../components/Reveal'
-import { PhoneIcon, SmsIcon } from '../components/Icons'
+import { EstimateForm } from '../components/EstimateForm'
+import { MapPinIcon, PhoneIcon, SmsIcon } from '../components/Icons'
 import { company } from '../data'
 
 export function Contact() {
-  const location = useLocation()
-
-  useEffect(() => {
-    if (location.hash === '#estimate') {
-      const el = document.getElementById('estimate')
-      el?.scrollIntoView({ behavior: 'smooth', block: 'start' })
-    }
-  }, [location])
-
   return (
     <>
       <section className="page-hero">
-        <div className="hero-media">
-          <img
-            src="/images/service-powerwash.jpg"
-            alt="Connecticut shoreline property maintained by Connecticut House Painters"
-            width={1600}
-            height={1067}
-          />
-        </div>
-        <div className="hero-shade" aria-hidden="true" />
-        <div className="page-hero-content">
-          <p className="display" style={{ color: 'var(--sky)', margin: '0 0 0.5rem', fontSize: '1.4rem' }}>
-            Connecticut House Painters
+        <div className="container">
+          <h1>Contact CT Softwash — call, text, or free estimate</h1>
+          <p>
+            Talk with {company.owner}&apos;s CT Softwash crew. Hours: {company.hours}. Based in
+            Ledyard — serving the shoreline and our listed counties.
           </p>
-          <h1>Contact</h1>
-          <p>Call, text, or request a free estimate — we are ready when you are.</p>
         </div>
       </section>
 
       <section className="section">
-        <div className="container form-shell">
+        <div className="container contact-grid">
           <Reveal>
-            <div className="contact-stack">
-              <div className="contact-card">
-                <h3>Office</h3>
-                <a href={company.office.tel}>{company.office.display}</a>
-                <div className="phone-row">
-                  <a className="btn btn-red" href={company.office.tel}>
-                    <PhoneIcon /> Call office
-                  </a>
-                </div>
-              </div>
-              <div className="contact-card">
-                <h3>Cell</h3>
-                <a href={company.cell.tel}>{company.cell.display}</a>
-                <div className="phone-row">
-                  <a className="btn btn-blue" href={company.cell.tel}>
-                    <PhoneIcon /> Call cell
-                  </a>
-                  <a className="btn btn-outline" href={company.cell.sms}>
-                    <SmsIcon /> Text cell
-                  </a>
-                </div>
-              </div>
-              <div className="contact-card">
-                <h3>Email</h3>
+            <div className="contact-card">
+              <h2>Reach us</h2>
+              <ul className="contact-list">
+                <li>
+                  <PhoneIcon />
+                  <div>
+                    <strong>Call</strong>
+                    <a href={company.phone.tel}>{company.phone.display}</a>
+                  </div>
+                </li>
+                <li>
+                  <SmsIcon />
+                  <div>
+                    <strong>Text</strong>
+                    <a href={company.phone.sms}>{company.phone.display}</a>
+                  </div>
+                </li>
+                <li>
+                  <MapPinIcon />
+                  <div>
+                    <strong>Shop / office</strong>
+                    <a href={company.address.mapsUrl} target="_blank" rel="noopener noreferrer">
+                      {company.address.full}
+                    </a>
+                    <span className="muted">{company.googleListing}</span>
+                  </div>
+                </li>
+              </ul>
+              <p>
+                Email:{' '}
                 <a href={`mailto:${company.email}`}>{company.email}</a>
-              </div>
-              <div className="contact-card">
-                <h3>Hours</h3>
-                <p>{company.hours}</p>
-              </div>
-              <div className="contact-card">
-                <h3>Service area</h3>
-                <p>{company.serviceArea}</p>
+              </p>
+              <div className="map-embed">
+                <iframe
+                  title="CT Softwash LLC on Google Maps"
+                  src={company.address.embedUrl}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
               </div>
             </div>
           </Reveal>
