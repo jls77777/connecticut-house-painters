@@ -1,96 +1,69 @@
 import { Link } from 'react-router-dom'
 import { Reveal } from '../components/Reveal'
 import { PhoneIcon } from '../components/Icons'
-import { company } from '../data'
+import { company, faqs } from '../data'
 
 export function About() {
   return (
     <>
       <section className="page-hero">
-        <div className="hero-media">
-          <img
-            src="/images/about-atmosphere.jpg"
-            alt="Shoreline Connecticut property being cleaned and prepared for paint"
-            width={1600}
-            height={1200}
-          />
-        </div>
-        <div className="hero-shade" aria-hidden="true" />
-        <div className="page-hero-content">
-          <p className="display" style={{ color: 'var(--sky)', margin: '0 0 0.5rem', fontSize: '1.4rem' }}>
-            Connecticut House Painters
+        <div className="container">
+          <h1>About CT Softwash — local soft wash with serious results</h1>
+          <p>
+            CT Softwash LLC is owned by {company.owner} and based at {company.address.full}. When
+            dirt gets silly, call Willie — and a licensed & insured crew that soft-washes shoreline
+            homes the right way.
           </p>
-          <h1>About</h1>
-          <p>Local craft, honest communication, and finishes that respect New England weather.</p>
         </div>
       </section>
 
       <section className="section">
-        <div className="container split">
+        <div className="container about-grid">
           <Reveal>
-            <div className="split-copy">
-              <h2>A Connecticut company that paints like it lives here</h2>
-              <p>
-                {company.name} is built around shoreline homes and Southeastern Connecticut
-                properties — places that see salt air, hard winters, and bright summer light.
-              </p>
-              <p>
-                Our approach is simple: protect what you have, prepare carefully, and finish clean.
-                We are licensed and insured, and we keep the job site respectful of your family,
-                neighbors, and schedule.
-              </p>
-              <p>
-                From Groton and Mystic to New London County and Middlesex County towns, we show up
-                ready to do the work right the first time.
-              </p>
-            </div>
+            <img
+              className="about-photo"
+              src="/images/about-atmosphere.jpg"
+              alt="Connecticut shoreline home exterior cleaned by soft washing"
+              width={900}
+              height={700}
+            />
           </Reveal>
           <Reveal>
-            <div className="media-frame">
-              <img
-                src="/images/service-exterior.jpg"
-                alt="Completed exterior painting on a Connecticut home"
-                loading="lazy"
-              />
+            <div>
+              <h2>Why soft wash matters here</h2>
+              <p>
+                Shoreline weather feeds algae, mildew, and black roof streaks. High pressure can
+                scar siding and lift shingle granules. We use soft-wash chemistry on houses and
+                roofs, and reserve power washing for surfaces that can take it.
+              </p>
+              <p>
+                Our owned sites publish the same promise: free estimates, trained technicians,
+                affordable pricing, 24/7 support for questions, and a 100% satisfaction guarantee.
+              </p>
+              <ul className="check-list">
+                <li>House washing & soft washing</li>
+                <li>Roof cleaning & treatment</li>
+                <li>Gutters, decks, patios, concrete, bluestone</li>
+                <li>Residential and light commercial exteriors</li>
+              </ul>
             </div>
           </Reveal>
         </div>
       </section>
 
-      <section className="section" style={{ background: 'rgba(232, 244, 255, 0.65)' }}>
-        <div className="container split reverse">
-          <Reveal>
-            <div className="split-copy">
-              <h2>What “no cut corners” means on site</h2>
-              <p>
-                Prep is not optional. Surfaces are cleaned, repaired where needed, and masked with
-                care. Materials are chosen for durability in our climate, not just the cheapest can
-                on the shelf.
-              </p>
-              <p>
-                You get clear estimates, reliable scheduling, and a crew that understands curb appeal
-                matters — especially when your home faces the Shoreline.
-              </p>
-              <div className="cta-actions">
-                <Link className="btn btn-red" to="/contact#estimate">
-                  Request free estimate
-                </Link>
-                <a className="btn btn-outline" href={company.office.tel}>
-                  <PhoneIcon /> {company.office.display}
-                </a>
-              </div>
-            </div>
-          </Reveal>
-          <Reveal>
-            <div className="media-frame">
-              <img
-                src="/images/logo.png"
-                alt={`${company.name} logo`}
-                style={{ objectFit: 'contain', background: '#fff', padding: '2rem', aspectRatio: '16/11' }}
-                loading="lazy"
-              />
-            </div>
-          </Reveal>
+      <section className="section section-dark willie-band">
+        <div className="container willie-band-inner">
+          <img className="willie-float" src="/images/willie.png" alt="Willie the Whale" width={200} height={200} />
+          <div>
+            <h2>Willie the Whale</h2>
+            <p>
+              Willie is our mascot and reminder that curb appeal can be fun without cutting corners
+              on craft. Tagline locked: <em>{company.tagline}</em>.
+            </p>
+            <a className="btn btn-red" href={company.phone.tel}>
+              <PhoneIcon /> {company.phone.display}
+            </a>
+          </div>
         </div>
       </section>
 
@@ -98,22 +71,25 @@ export function About() {
         <div className="container">
           <Reveal>
             <div className="section-head">
-              <h2>Service area</h2>
-              <p>
-                We proudly serve {company.serviceArea}, including towns like{' '}
-                {company.towns.slice(0, 6).join(', ')}, and nearby communities.
-              </p>
+              <h2>Questions we hear a lot</h2>
+              <p>Straight answers from how we actually work.</p>
             </div>
           </Reveal>
-          <Reveal>
-            <div className="towns">
-              {company.towns.map((town) => (
-                <span className="town" key={town}>
-                  {town}
-                </span>
-              ))}
-            </div>
-          </Reveal>
+          <div className="faq-list">
+            {faqs.map((f) => (
+              <Reveal key={f.q}>
+                <details className="faq">
+                  <summary>{f.q}</summary>
+                  <p>{f.a}</p>
+                </details>
+              </Reveal>
+            ))}
+          </div>
+          <div className="section-cta">
+            <Link className="btn btn-blue" to="/contact">
+              Contact the crew
+            </Link>
+          </div>
         </div>
       </section>
     </>

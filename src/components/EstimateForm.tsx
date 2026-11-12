@@ -62,14 +62,14 @@ export function EstimateForm({ compact = false }: { compact?: boolean }) {
           <h3>Estimate request ready</h3>
           <p>
             Thanks — your details are set. If your email app opened, hit send. Prefer to talk now?
-            Call the office or cell and we will get you on the calendar.
+            Call or text Willie&apos;s crew and we will get you on the calendar.
           </p>
           <div className="cta-actions" style={{ justifyContent: 'center' }}>
-            <a className="btn btn-red" href={company.office.tel}>
-              <PhoneIcon /> Call office {company.office.display}
+            <a className="btn btn-red" href={company.phone.tel}>
+              <PhoneIcon /> Call {company.phone.display}
             </a>
-            <a className="btn btn-blue" href={company.cell.tel}>
-              <PhoneIcon /> Call cell {company.cell.display}
+            <a className="btn btn-blue" href={company.phone.sms}>
+              <SmsIcon /> Text us
             </a>
             <button type="button" className="btn btn-outline" onClick={() => setStatus('idle')}>
               Send another request
@@ -84,8 +84,8 @@ export function EstimateForm({ compact = false }: { compact?: boolean }) {
     <div className="form-panel" id="estimate">
       <h2>{compact ? 'Free estimate' : 'Request a free estimate'}</h2>
       <p>
-        Tell us about the project. We serve {company.serviceArea}. Same-day callbacks during
-        business hours when possible.
+        Tell us about the property. We serve {company.serviceArea}. Fast callbacks during business
+        hours when possible.
       </p>
       <form onSubmit={onSubmit} noValidate>
         <div className={`form-grid ${compact ? '' : 'two'}`}>
@@ -122,7 +122,7 @@ export function EstimateForm({ compact = false }: { compact?: boolean }) {
               name="address"
               autoComplete="street-address"
               required
-              placeholder="Street or town in CT"
+              placeholder="Street or town in CT / RI"
             />
           </div>
           <div className="field" style={{ gridColumn: compact ? undefined : '1 / -1' }}>
@@ -144,7 +144,7 @@ export function EstimateForm({ compact = false }: { compact?: boolean }) {
               id="message"
               name="message"
               required
-              placeholder="Rooms, exterior sides, timing, or anything we should know"
+              placeholder="Siding, roof streaks, gutters, timing, or anything we should know"
             />
           </div>
         </div>
@@ -152,13 +152,13 @@ export function EstimateForm({ compact = false }: { compact?: boolean }) {
           <button className="btn btn-red" type="submit" disabled={status === 'submitting'}>
             {status === 'submitting' ? 'Sending…' : 'Request free estimate'}
           </button>
-          <a className="btn btn-outline" href={company.cell.sms}>
-            <SmsIcon /> Text cell
+          <a className="btn btn-outline" href={company.phone.sms}>
+            <SmsIcon /> Text {company.phone.display}
           </a>
         </div>
         <p className="form-note">
           Submits via {FORMSPREE_ID ? 'secure form delivery' : `email to ${company.email}`} · Or call{' '}
-          <a href={company.office.tel}>{company.office.display}</a>
+          <a href={company.phone.tel}>{company.phone.display}</a>
         </p>
         {error ? <p className="form-error">{error}</p> : null}
       </form>

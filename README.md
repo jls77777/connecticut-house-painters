@@ -1,6 +1,12 @@
-# Connecticut House Painters LLC
+# CT Softwash LLC
 
-Marketing site for Connecticut House Painters — painting and power washing across Southeastern Connecticut and the Shoreline.
+Marketing site for **CT Softwash LLC** — soft washing, roof cleaning, and exterior restoration across Middlesex, New London, and Windham Counties (CT), Washington County (RI), and the Connecticut shoreline.
+
+**Tagline:** When dirt gets silly call Willie.
+
+## Stack
+
+Vite + React + React Router SPA. Static build with SPA fallbacks for publish-app / static hosts.
 
 ## Develop
 
@@ -9,15 +15,14 @@ npm install
 npm run dev
 ```
 
-## Build
-
 ```bash
 npm run build
 npm run preview
 ```
 
-## Contact
+Optional Formspree: set `VITE_FORMSPREE_ID` for hosted form delivery (mailto fallback always available).
 
-- Office: (860) 879-8222
-- Cell: (860) 514-5335
-- Email: connecticuthousepainters@gmail.com
+## Brand assets
+
+- Logos / Willie: `public/images/`
+- Fonts: `public/fonts/` (Big Shoulders Display + Figtree today; wire user-uploaded brand fonts when provided)

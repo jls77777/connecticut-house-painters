@@ -12,56 +12,63 @@ delegated: Vite + React (SPA with client-side routes) — chosen for publish-app
 
 ## Users
 
-Homeowners and small commercial property owners in Southeastern Connecticut / Shoreline / New London County and Middlesex County who need interior painting, exterior painting, cabinet painting, deck staining, power washing, or commercial painting. Primary job: get a trusted local painter on the phone or book a free estimate without friction.
+Homeowners and small commercial property owners across Middlesex, New London, and Windham Counties in Connecticut, Washington County in Rhode Island, and the Connecticut shoreline who need soft washing, power washing, roof cleaning, gutter cleaning, surface cleaning, deck/patio washing, or bluestone restoration. Primary job: get a trusted local soft-wash crew on the phone or book a free estimate without friction.
 
 ## Product Purpose
 
-Marketing website for Connecticut House Painters LLC that converts visitors into phone calls and free-estimate requests. Success = clear local trust, obvious click-to-call, and a working estimate form with a success state.
+Marketing website for CT Softwash LLC that converts visitors into calls, texts, and free-estimate requests. Success = clear local trust, Willie-branded personality that still feels professional, obvious click-to-call/text, SEO service + city pages, and a working estimate form with a success state.
 
 ## Positioning
 
-Local Connecticut house painters who do not cut corners — licensed & insured tone, shoreline/SE CT focus, painting + power washing under one roof. Tagline commitment: “We don't cut corners we paint them.”
+Fun, powerful shoreline soft-wash company led by Willie the Whale — “When dirt gets silly call Willie.” Gentle soft-wash chemistry for houses and roofs; stronger pressure where surfaces can take it. Painting cross-sell available via Connecticut House Painters.
 
 ## Operating Context
 
-Visitors arrive from local search or referral on phone or desktop, often mid-decision about a paint project. They scan service list, service area, and trust cues, then call the office/cell or submit an estimate request. Business hours Mon–Sat 7AM–6PM.
+Visitors arrive from local search or referral on phone or desktop, often mid-decision about algae, black roof streaks, dirty siding, or gutters. They scan services, service-area map/towns, and trust cues, then call/text or submit an estimate. Business hours Mon–Fri 8:00 AM – 6:00 PM (published on owned sites).
 
 ## Capabilities and Constraints
 
-- Required pages: Home, Services, About, Contact with shared nav/footer
-- Click-to-call for office (860-879-8222) and cell (860-514-5335); soft SMS where natural
+- Required pages: Home, Services (+ detail pages), Service areas (+ city subpages), About, Contact, Gallery, Painting services available
+- Click-to-call and text for (860) 514-5335
 - Free estimate form: name, phone, email, address/town, service type, message + clear success state
+- Interactive or clear visual map of service counties/shoreline
+- City pages with royalty-free city imagery and keyworded image alts
 - Mobile-first; excellent desktop
 - Prefer working form without custom backend (Formspree or mailto fallback)
-- No invented testimonials, ratings, or licensing numbers beyond the brief’s licensed/insured tone
+- No invented testimonials, ratings, licenses, or prices beyond what owned CT Softwash sites already publish
 - publish-app must succeed from a committed/pushed git repo
+- If user logo/font uploads appear later, wire them into `public/` and CSS
 
 ## Brand Commitments
 
-- Legal/brand name: Connecticut House Painters LLC
-- Binding brand palette from current site: deep navy (#00152f / #062b66), signal blue (#005edb / #0879f2), sky accent (#30cfff), action red (#e9090b)
-- Existing brand assets: Willie the Whale mascot, company logos from connecticuthousepainters.com
-- Structure/UX polish inspiration: nhvpainters.com (layout patterns only; keep CHP colors/brand)
-- Voice: confident, honest, local, quality-first — not corporate fluff
-- User frontend rules: brand-first hero, one composition, expressive non-default fonts, full-bleed real imagery, no card clutter in hero, purposeful motion, avoid purple-AI / cream-terracotta clichés
+- Legal/brand name: CT Softwash LLC
+- Owner/contact: Javier Santos
+- Phone (call/text): 860-514-5335
+- Email: connecticuthousepainters@gmail.com
+- Address: 919 Colonel Ledyard Hwy, Ledyard, CT 06339
+- Mascot: Willie the Whale; tagline “When dirt gets silly call Willie”
+- Binding brand palette (CHP color-code.pdf): sky `#33cfff`, signal blue `#0456d0`, deep navy `#0f356d`, action red `#de0703`, light gray `#bec4c6`, slate gray `#87939b`
+- Visual world: working-waterfront washdown at dawn in that navy/blue/cyan system with red CTAs — fun and powerful, not generic painter cards or AI purple/cream-terracotta
+- Voice: confident, friendly, local, results-first — Willie brings humor; the work stays serious
+- User frontend rules: brand-first hero, one composition, expressive non-default fonts, full-bleed real imagery, no card clutter in hero, purposeful motion
 
 ## Evidence on Hand
 
-- Live site reference: https://connecticuthousepainters.com/
-- Structure reference: https://www.nhvpainters.com/
-- Downloaded service photos and logos (sourced from current CHP site)
-- Contact: office 860-879-8222, cell 860-514-5335, email connecticuthousepainters@gmail.com
-- Service area towns named on current site: Groton, Mystic, Waterford, New London, Ledyard, and more (brief narrows focus to SE CT / Shoreline / New London & Middlesex counties)
-- Stats shown on current site (10+ years, 1000+ projects, satisfaction guarantee, 5-star tone) — treat as marketing claims already published by the company; do not invent new benchmarks
+- Owned facts/copy sources: https://connecticutpowerwashing.com/ and https://connecticutpowerwashingservice.com/
+- IA inspiration only: https://www.powerwashri.com/ and https://www.rubberduckypowerwashing.org/
+- Painting sister brand: https://connecticuthousepainters.com/
+- Repo assets: Willie, logos, service/project photos under `public/images/`
+- Published trust language from owned sites: licensed & insured staff, soft-wash technique for siding/roofs, free estimates, 100% satisfaction guarantee, 200+ star reviews tone
+- Published reviews on owned site (reuse, do not invent): Linda Schultz (Mystic), Kris Hais (Waterford), Alena Erford (Ledyard)
 
 ## Product Principles
 
-1. Conversion first: every page makes calling or requesting an estimate obvious within seconds.
-2. Local proof over generic painter tropes: CT shoreline towns, real project imagery, licensed/insured tone.
-3. Brand color is law; layout may elevate toward NHV polish without becoming a clone.
+1. Conversion first: every page makes calling, texting, or requesting an estimate obvious within seconds.
+2. Local SEO structure: service pages + city service-area pages with keyworded imagery and clear county coverage.
+3. Willie is brand, not clutter: mascot and tagline earn attention without hiding the offer or the phone number.
 4. Forms and phones must work on real devices; no dead CTAs.
-5. Do not fabricate reviews, licenses, prices, or warranties beyond what the company already states.
+5. Do not fabricate reviews, licenses, prices, or warranties beyond what the company already states on owned sites.
 
 ## Accessibility & Inclusion
 
-Target WCAG 2.2 AA contrast for body text, visible focus, keyboard-reachable nav and form controls, usable tap targets for phone CTAs on mobile.
+Target WCAG 2.2 AA contrast for body text, visible focus, keyboard-reachable nav and form controls, usable tap targets for phone/text CTAs on mobile. Respect `prefers-reduced-motion`.
